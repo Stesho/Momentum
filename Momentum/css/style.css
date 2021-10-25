@@ -31,12 +31,38 @@ body {
   padding: 20px;
 }
 
+.player-title {
+  font-size: 20px;
+  opacity: .8;
+}
+
+.player-timeline {
+  height: 10px;
+  width: 350px;
+  margin: 5px 0 10px 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.progress {
+  background: coral;
+  width: 0%;
+  height: 100%;
+  transition: 0.1s;
+}
+
 .player-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.toggle-buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 120px;
-  margin-bottom: 28px;
 }
 
 .play-list {
@@ -119,6 +145,39 @@ body {
 
 .play-next {
   background-image: url("../assets/svg/play-next.svg");
+}
+
+.player-time {
+  display: flex;
+}
+
+.divider {
+  margin: 0 5px;
+}
+
+.volume {
+  position: relative;
+  display: flex;
+  align-items: center;  
+}
+
+.volume-line {
+  height: 10px;
+  width: 80px;
+  margin: 0 0 0 5px;
+  background-color: #fff;
+
+  transition: 0.5s;
+}
+
+.volume-progress {
+  background-color: coral;
+  width: 0%;
+  height: 100%;
+}
+
+.volume-icon {
+  background-image: url("../assets/svg/volume-high.svg");
 }
 
 .weather {
@@ -244,14 +303,67 @@ body {
 }
 
 .footer {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 30vh;
   min-height: 160px;  
   padding: 20px;
+}
+
+.settings {
+  position: absolute;
+  display: flex;
+  color: #222;
+  background-color: #fff;
+  left: 20px;
+  bottom: 62px;
+  border-radius: 3px;
+}
+
+.settings::after {
+  content: ''; 
+  position: absolute; 
+  left: 6px; 
+  bottom: -20px;
+  border: 10px solid transparent; 
+  border-top: 10px solid #fff;  
+}
+
+.settings-list {
+  border-right: 1px solid rgba(0,0,0,0.2);
+  list-style-type: none;
+}
+
+.settings-item {
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: left;
+  opacity: 0.65;
+}
+
+.settings-view {
+  padding: 10px 20px;
+}
+
+.settings-title {
+  color: #222;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.settings-description {
+  text-align: left;
+  opacity: 0.7;
+}
+
+.settings-icon {
+  position: absolute;
+  background-image: url("../assets/svg/settings.svg");
+  left: 20px;
 }
 
 .change-quote {
