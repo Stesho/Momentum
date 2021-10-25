@@ -24,7 +24,7 @@ export default function getTimeOfDay() {
 function showTime() {
   const currTime = new Date();
   const options = {weekday: 'long', month: 'long', day: 'numeric'};
-  time.textContent = currTime.toLocaleTimeString();
+  time.textContent = currTime.toLocaleTimeString('en-En', {hour12: false});
   date.textContent = currTime.toLocaleDateString('en-En', options);
   greeting.textContent = `Good ${getTimeOfDay()}`;
 

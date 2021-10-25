@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   min-width: 480px;
   min-height: 100vh;
@@ -73,7 +77,6 @@ body {
   position: relative;
   padding: 5px;
   padding-left: 20px;
-  list-style: none;
   opacity: .8;
   cursor: pointer;
   transition: .3s;
@@ -91,7 +94,7 @@ body {
   font-weight: 900;
 }
 
-.item-active::before {
+.active-audio::before {
   color: #C5B358;
 }
 
@@ -334,7 +337,6 @@ body {
 
 .settings-list {
   border-right: 1px solid rgba(0,0,0,0.2);
-  list-style-type: none;
 }
 
 .settings-item {
@@ -356,6 +358,7 @@ body {
 }
 
 .settings-description {
+  padding: 5px  0 15px 0;
   text-align: left;
   opacity: 0.7;
 }
@@ -364,6 +367,17 @@ body {
   position: absolute;
   background-image: url("../assets/svg/settings.svg");
   left: 20px;
+}
+
+.languges-item {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.photos-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .change-quote {

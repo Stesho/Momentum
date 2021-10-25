@@ -57,13 +57,13 @@ function toggleAudio() {
     player.play();
     isPlay = true;
   }
-  playItems[active].classList.add('item-active');
+  playItems[active].classList.add('active-audio');
 }
 
 function playNext() {
-  playItems[active].classList.remove('item-active');
+  playItems[active].classList.remove('active-audio');
   active === sounds.length-1 ? active=0 : active++;
-  playItems[active].classList.add('item-active');
+  playItems[active].classList.add('active-audio');
   player.src = sounds[active].src;
 
   if(!isPlay) {
@@ -75,9 +75,9 @@ function playNext() {
 }
 
 function playPrev() {
-  playItems[active].classList.remove('item-active');
+  playItems[active].classList.remove('active-audio');
   active === 0 ? active=sounds.length-1 : active--;
-  playItems[active].classList.add('item-active');
+  playItems[active].classList.add('active-audio');
   player.src = sounds[active].src;
   
   if(!isPlay) {
