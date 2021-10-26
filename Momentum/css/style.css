@@ -326,6 +326,14 @@ body {
   border-radius: 3px;
 }
 
+.setting {
+  display: none;
+}
+
+.show-setting {
+  display: block;
+}
+
 .settings::after {
   content: ''; 
   position: absolute; 
@@ -344,6 +352,12 @@ body {
   padding: 10px 20px;
   text-align: left;
   opacity: 0.65;
+  cursor: pointer;
+}
+
+.settings-active {
+  opacity: 1;
+  font-weight: 600;
 }
 
 .settings-view {
