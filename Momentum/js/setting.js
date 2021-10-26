@@ -5,6 +5,7 @@ const settingsList = document.querySelectorAll('.settings-item');
 const settings = document.querySelectorAll('.setting');
 const settingsFrame = document.querySelector('.settings');
 const settingsIcon = document.querySelector('.settings-icon');
+const visibleBlock = document.querySelectorAll('.block-item input');
 let activeLink = 0;
 let isOpen = false;
 
@@ -17,6 +18,36 @@ photoLinks.forEach(el => {
 settingsList.forEach(el => {
   el.addEventListener('click', changeActiveSetting);
 });
+
+visibleBlock.forEach(el => {
+  el.addEventListener('change', hideBlock);
+});
+
+function hideBlock(blockNum) {
+  console.log(blockNum.target.value);
+  let block;
+  switch(blockNum.target.value) {
+    case "1":
+      block = document.querySelector('.weather');
+      break;
+    case "2":
+      block = document.querySelector('.player');
+      break;
+    case "3":
+      block = document.querySelector('.greeting-container');
+      break;
+    case "4":
+      block = document.querySelector('.time');
+      break;
+    case "5":
+      block = document.querySelector('.date');
+      break;
+    case "6":
+      block = document.querySelector('.quotes');
+      break;
+  }
+  block.classList.toggle('hidden');
+}
 
 function showFrame() {
   if(isOpen) {
