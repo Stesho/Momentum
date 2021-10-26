@@ -318,7 +318,7 @@ body {
 
 .settings {
   position: absolute;
-  display: flex;
+  display: none;
   color: #222;
   background-color: #fff;
   left: 20px;
@@ -383,6 +383,13 @@ body {
   left: 20px;
 }
 
+.languges-item,
+.photos-item,
+.block-item {
+  padding: 3px 0;
+  opacity: 0.8;
+}
+
 .languges-item {
   display: flex;
   justify-content: space-between;
@@ -390,6 +397,11 @@ body {
 }
 
 .photos-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-item {
   display: flex;
   justify-content: space-between;
 }

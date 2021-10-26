@@ -69,27 +69,45 @@
         <li class="settings-item">Hide block</li>
       </ul>
       <div class="settings-view">
-        <div class="settings-title">
-          Language
-        </div>
-        <div class="settings-description">
-          Choose your interface language 
-        </div>
         <div class="language-wrapper setting show-setting">
+          <div class="settings-title">
+            Language
+          </div>
+          <div class="settings-description">
+            Choose your interface language 
+          </div>
           <ul class="languages">
             <li class="languges-item">Russian <input name="language-type" type="radio" checked></li>
             <li class="languges-item">English <input name="language-type" type="radio"></li>
           </ul>
         </div>
         <div class="photo-source setting">
+          <div class="settings-title">
+            Photo source
+          </div>
+          <div class="settings-description">
+            Choose the link for getting photo 
+          </div>
           <ul class="photos">
             <li class="photos-item">GitHub   <input name="photo-source" type="radio" checked></li>
             <li class="photos-item">Unsplash <input name="photo-source" type="radio"></li>
             <li class="photos-item">Flickr   <input name="photo-source" type="radio"></li>
+            <li class="photos-item">Tag:   <input name="photo-source" placeholder="Enter the tag"></li>
           </ul>
         </div>
         <div class="hide-block setting">
-          asd
+          <div class="settings-title">
+            Hide block
+          </div>
+          <div class="settings-description">
+            Set block visibility 
+          </div>
+          <ul class="block-list">
+            <li class="block-item">Weather<input name="blocks-visibility" type="checkbox" checked></li>
+            <li class="block-item">Player<input name="blocks-visibility" type="checkbox" checked></li>
+            <li class="block-item">Greeting<input name="blocks-visibility" type="checkbox" checked></li>
+            <li class="block-item">Time<input name="blocks-visibility" type="checkbox" checked></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -101,11 +119,11 @@
       </div>
     </div>
   </footer>
-  <!-- <script type="module" src="js/time-and-greeting.js"></script> -->
-  <!-- <script type="module" src="js/slider.js"></script> -->
-  <!-- <script type="module" src="js/weather.js"></script> -->
-  <!-- <script type="module" src="js/quotes.js"></script> -->
-  <!-- <script type="module" src="js/player.js"></script> -->
+  <script type="module" src="js/time-and-greeting.js"></script>
+  <script type="module" src="js/slider.js"></script>
+  <script type="module" src="js/weather.js"></script>
+  <script type="module" src="js/quotes.js"></script>
+  <script type="module" src="js/player.js"></script>
   <script type="module" src="js/setting.js"></script>
 </body>
 </html>
