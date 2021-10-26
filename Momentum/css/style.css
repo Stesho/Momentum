@@ -25,6 +25,13 @@ body {
   transition: background-image 1s ease-in-out;
 }
 
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.5s;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
