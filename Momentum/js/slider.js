@@ -43,3 +43,5 @@ prev.addEventListener('click', () => {
 });
 
 setBg();
+
+export default setBg;

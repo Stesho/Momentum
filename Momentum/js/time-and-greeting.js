@@ -27,7 +27,7 @@ function showTime() {
   time.textContent = currTime.toLocaleTimeString('en-En', {hour12: false});
   date.textContent = currTime.toLocaleDateString('en-En', options);
   greeting.textContent = `Good ${getTimeOfDay()}`;
-
+  
   setTimeout(showTime, 1000);
 }
 
