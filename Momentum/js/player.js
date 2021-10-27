@@ -18,9 +18,23 @@ const volumeIcon = document.querySelector('.volume-icon');
 
 let active = 0;
 let isPlay = false;
+let isMute = false;
 let playItems;
 
-// volumeIcon.addEventListener('click', () => );
+volumeIcon.addEventListener('click', () => {
+  if(isMute) {
+    volumeProgress.style.width = '75%';
+    player.volume = 0;
+    volumeIcon.style.backgroundImage = 'url("../assets/svg/volume-high.svg")';
+    isMute = false;
+  }
+  else {
+    volumeProgress.style.width = '0';
+    player.volume = 0;
+    volumeIcon.style.backgroundImage = 'url("../assets/svg/volume-mute.svg")';
+    isMute = true;
+  }
+});
 volumeLine.addEventListener('click', updateVolume);
 timeline.addEventListener('click', handleUpdateProgress);
 playBtn.addEventListener('click', toggleAudio);

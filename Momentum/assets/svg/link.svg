@@ -1,0 +1,21 @@
+<svg width="580" height="400.00000000000006" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <metadata transform="matrix(0.012159606214862118,0,0,0.012159606214862118,0,31.34213394076056) " id="svg_9">image/svg+xml</metadata>
+
+  <g id="svg_11">
+   <g id="svg_7" transform="matrix(0.012159606214862118,0,0,-0.012159606214862118,0.3693222725708676,48.693274301373066) ">
+    <path fill="#ffffff" id="svg_8" d="m24331.082031,-12603.389648l0,-320q0,-119 -84.5,-203.5q-84.5,-84.5 -203.5,-84.5l-832,0q-119,0 -203.5,84.5q-84.5,84.5 -84.5,203.5l0,832q0,119 84.5,203.5q84.5,84.5 203.5,84.5l704,0q14,0 23,-9q9,-9 9,-23l0,-64q0,-14 -9,-23q-9,-9 -23,-9l-704,0q-66,0 -113,-47q-47,-47 -47,-113l0,-832q0,-66 47,-113q47,-47 113,-47l832,0q66,0 113,47q47,47 47,113l0,320q0,14 9,23q9,9 23,9l64,0q14,0 23,-9q9,-9 9,-23zm384,864l0,-512q0,-26 -19,-45q-19,-19 -45,-19q-26,0 -45,19l-176,176l-652,-652q-10,-10 -23,-10q-13,0 -23,10l-114,114q-10,10 -10,23q0,13 10,23l652,652l-176,176q-19,19 -19,45q0,26 19,45q19,19 45,19l512,0q26,0 45,-19q19,-19 19,-45z"/>
+   </g>
+  </g>
+ </g>
+</svg>
