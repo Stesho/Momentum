@@ -10,6 +10,16 @@ let activeLink = 0;
 let isOpen = false;
 
 settingsIcon.addEventListener('click', showFrame);
+window.addEventListener('beforeunload', setHiddenBlock);
+
+window.addEventListener('load', () => {
+  getHiddenBlock();
+  for(let i = 0; i < visibleBlock.length; i++) {
+    if(visibleBlock[i].checked === false) {
+      hide(i+1);
+    }
+  }
+});
 
 photoLinks.forEach(el => {
   el.addEventListener('change', setActive);
@@ -23,26 +33,29 @@ visibleBlock.forEach(el => {
   el.addEventListener('change', hideBlock);
 });
 
-function hideBlock(blockNum) {
-  console.log(blockNum.target.value);
+function hideBlock(event) {
+  hide(Number(event.target.value));
+}
+
+function hide(num) {
   let block;
-  switch(blockNum.target.value) {
-    case "1":
+  switch(num) {
+    case 1:
       block = document.querySelector('.weather');
       break;
-    case "2":
+    case 2:
       block = document.querySelector('.player');
       break;
-    case "3":
+    case 3:
       block = document.querySelector('.greeting-container');
       break;
-    case "4":
+    case 4:
       block = document.querySelector('.time');
       break;
-    case "5":
+    case 5:
       block = document.querySelector('.date');
       break;
-    case "6":
+    case 6:
       block = document.querySelector('.quotes');
       break;
   }
@@ -81,6 +94,18 @@ function setActive() {
     }
   }
   setBg();
+}
+
+function setHiddenBlock() {
+  visibleBlock.forEach(el => {
+    localStorage.setItem(`${el.value}`, el.checked);
+  });
+}
+
+function getHiddenBlock() {
+  visibleBlock.forEach(el => {
+    el.checked = localStorage.getItem(`${el.value}`) === 'true' ? true : false;
+  });
 }
 
 function getActiveLink() {
